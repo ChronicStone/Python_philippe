@@ -11,4 +11,5 @@ for val in range(1, 101):
         
 # We should check if the current value can be divided by 3 and 5 in first, otherwise we have
 # a bug : some values will be declared as fizz or buzz instead of fizzbuzz, because asserting
-# that val can be divided by 3 does not prove that it cant also be divided by 5
+# that val can be divided by 3 does not prove that it cant also be divided by 5, so we have
+# to put the dual check on top.
