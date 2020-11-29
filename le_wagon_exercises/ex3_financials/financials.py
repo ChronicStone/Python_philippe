@@ -2,7 +2,7 @@
 
 # TODO: 1st exercise: Define the `forward_price` function
 def forward_price(spot, interest_rate, time):
-    return spot * 2.7182 ** (interest_rate * time)
+    return round(spot * 2.7182 ** (interest_rate * time), 2)
 
 
 
@@ -10,6 +10,6 @@ def forward_price(spot, interest_rate, time):
 
 def short_pnl(positions, mtm): 
     value = 0
-    for index in enumerate(positions):
+    for (index, key) in enumerate(positions):
         value += (positions[index] - mtm[index])
     return value
